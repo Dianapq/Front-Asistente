@@ -12,7 +12,7 @@ const Chatprompt = ({ user }) => {
   useEffect(() => {
     const fetchConversations = async () => {
       try {
-        const res = await axios.get('https://asistente-back.vercel.app/api/chat/history', {
+        const res = await axios.get('https://back-asistente.vercel.app/api/chat/history', {
           headers: { Authorization: `Bearer ${token}` },
         });
         const previousMessages = res.data.map((conv) => ([
@@ -38,7 +38,7 @@ const Chatprompt = ({ user }) => {
 
     try {
       const res = await axios.post(
-        'https://asistente-back.vercel.app/api/chat',
+        'https://back-asistente.vercel.app/api/chat',
         { prompt },
         {
           headers: { Authorization: `Bearer ${token}` }

@@ -23,7 +23,7 @@ const RegisterForm = ({ onSwitchToLogin }) => {
     }
 
     try {
-      await axios.post('https://asistente-back.vercel.app/api/chat/register', {
+      await axios.post('https://back-asistente.vercel.app/api/chat/register', {
         username: formData.username,
         password: formData.password
       });

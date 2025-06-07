@@ -13,7 +13,7 @@ const LoginForm = ({ onLogin }) => {
     e.preventDefault();
     setError('');
     try {
-      const res = await axios.post('https://asistente-back.vercel.app/api/chat/login', formData);
+      const res = await axios.post('https://back-asistente.vercel.app/api/chat/login', formData);
       const { token, user } = res.data;
       localStorage.setItem('token', token);
       localStorage.setItem('user', JSON.stringify(user));

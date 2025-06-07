@@ -116,7 +116,7 @@ const Chatprompt = ({ user }) => {
 
   return (
     <div style={styles.container}>
-      <h1 style={styles.title}>💬 Chat con Manuel (Experto en Automóviles)</h1>
+      <h1 style={styles.title}> DH Ecoambiental - Chat con Manuel</h1>
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         <div style={styles.chatBox}>
           {messages.map((msg, index) => (

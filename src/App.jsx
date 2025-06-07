@@ -23,7 +23,7 @@ const App = () => {
   return (
     <div>
       <h1 style={styles.title}>
-        Antonio Motores, tu asistente, mecánico, asesor y conductor de confianza
+        En DH Ecoambiental cuenta con Manuel, tu asistente de confiaza
       </h1>
 
       {!user ? (

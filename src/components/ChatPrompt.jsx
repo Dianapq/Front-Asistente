@@ -34,7 +34,7 @@ const [prompt, setPrompt] = useState('')
         try {
           setIsLoading(true);
           const response = await fetch(
-            `http://localhost:5000/api/load-conversation?nombreUsuario=${encodeURIComponent(nombreUsuario)}&nombreEmpresa=${encodeURIComponent(nombreEmpresa)}`
+            `https://back-asitente.vercel.app/api/load-conversation?nombreUsuario=${encodeURIComponent(nombreUsuario)}&nombreEmpresa=${encodeURIComponent(nombreEmpresa)}`
           );
 
           const data = await response.json();
@@ -70,7 +70,7 @@ const [prompt, setPrompt] = useState('')
       setConversations(prev => [...prev, newMessage]);
       setIsLoading(true);
 
-      const response = await fetch('http://localhost:5000/api/chat', {
+      const response = await fetch('https://back-asitente.vercel.app', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -136,7 +136,7 @@ const [prompt, setPrompt] = useState('')
         
         // Intentar guardar la conversación antes de cerrar
         if (conversations.length > 0) {
-          const response = await fetch('http://localhost:5000/api/save-conversation', {
+          const response = await fetch('https://back-asitente.vercel.app/api/save-conversation', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
